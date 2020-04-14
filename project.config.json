@@ -10,7 +10,7 @@
 	},
 	"appid": "wxd564d11e228c673c",
 	"projectname": "WeDaily-Weapp",
-	"libVersion": "2.6.2",
+	"libVersion": "2.10.4",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {

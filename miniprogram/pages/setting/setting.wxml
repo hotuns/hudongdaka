@@ -1,28 +1,19 @@
-<!--pages/setting/setting.wxml-->
-<nav
-    title="设置"
-    alwaysShow
-    back
->
-</nav>
-
+<!-- pages/setting/setting.wxml -->
+<nav title="设置" alwaysShow back></nav>
 <toast id="toast"></toast>
-
 <view class="body" style="padding-top: {{ headerHeight }}px">
-    
     <text class="tip-text-big interval">{{ text.tip1 }}</text>
     <view class="table-view interval">
-        <!-- <view class="cell">
+        <view class="cell" bind:tap="opentutorial">
             <text>{{ text.setting1[0] }}</text>
-        </view> -->
-        <view class="cell" bindtap="cellClick" data-type="log">
+        </view>
+        <!-- <view class="cell" bindtap="cellClick" data-type="log">
             <text>{{ text.setting1[1] }}</text>
         </view>
-        <!-- <view class="cell" bindtap="copyUrl" data-page="index">
+        <view class="cell" bindtap="copyUrl" data-page="index">
             <text>{{ text.setting1[2] }}</text>
         </view> -->
     </view>
-
     <text class="tip-text-big interval">{{ text.tip2 }}</text>
     <view class="table-view interval">
         <view class="cell" bindtap="cellToastStyle">
@@ -38,23 +29,19 @@
                 <image src="/images/flag-icon/finish.svg" class="finish-image" wx:if="{{ toastStyle == 1 }}"></image>
             </view>
         </view>
-
         <view class="cell" bindtap="reload">
             <text>{{ text.setting2[1] }}</text>
         </view>
-
         <view class="cell" bindtap="unbind" wx:if="{{ partnerInfo }}">
             <text style="color:#E64340">{{ text.setting2[2] }}</text>
         </view>
     </view>
-
     <text class="tip-text-big interval">{{ text.tip3 }}</text>
     <view class="table-view interval">
-        <view class="cell" bindtap="cellClick" data-type="zero">
+        <view class="cell" bindtap="cellClick" data-type="author">
             <text>{{ text.setting3[0] }}</text>
         </view>
     </view>
-
     <view class="footer">
         <view>{{ text.footer[0] }}</view>
         <text>{{ text.footer[1] }}</text>

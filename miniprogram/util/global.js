@@ -2,7 +2,7 @@
  * 全局常量文件
  */
 
- 
+
 /**
  * 系统
  */
@@ -14,14 +14,14 @@ const system = {
  * 登录界面
  */
 const login = {
-    title: 'We Daily',   // logo文字提示
+    title: '我们的一天',   // logo文字提示
     login: 'Start',         // 登录按钮
     loading: 'Loading',     // 登录中
 
     // tip1: '每天都在坚持\n养成好的习惯',
     // tip2: '当然,',
     tip3: '你是我的习惯',
-    
+
 }
 
 /**
@@ -29,7 +29,7 @@ const login = {
  */
 const hello = {
     tip1: {
-        title: 'Hello ',    
+        title: 'Hello ',
         subTitle: '这是一份新手教程\n请查收',
     },
 
@@ -50,7 +50,7 @@ const hello = {
         // string2: '2. 查看今日习惯',
         // string3: '3. 点击习惯打卡'
     },
-    
+
     // 关注公众号
     tip4: {
         string1: '3. 点击提醒对方打卡',
@@ -61,7 +61,7 @@ const hello = {
 
     // 结束
     tip5: {
-        string1: 'We Daily',
+        string1: '我们的一天',
         string2: 'Let\'s go!'
     }
 }
@@ -70,7 +70,7 @@ const hello = {
  * 我的
  */
 const mine = {
-    day: '使用We Daily ',
+    day: '已经坚持了 ',
     inviteTip: '点击邀请好友一起打卡',
     myPartner: 'Ta',
     myPartnerGirl: '她',
@@ -79,7 +79,7 @@ const mine = {
     myHabit: '我的习惯',
     empty: '~ 空空如也 ~',
     addHabit: '点击添加习惯',
-    
+
     habitTip1: '已打卡 ',
     habitTip2: '剩余 ',
     habitFinish: '已结束'
@@ -140,7 +140,7 @@ const add = {
     endPlaceholder: '一直坚持下去！',
     delete: '删除',
     finish: '我设置好了',
-    
+
     nameLength: '10个字就好了哦',
     dateError: '好好选时间',
     saveError: '不！你没设置好',
@@ -168,7 +168,7 @@ const square = {
 
     square: {
         navTitle: 'Write what you think',
-        
+
         noMore: '只有这么多啦 ~',
         mine: '我的',
         square: '广场'
@@ -238,13 +238,13 @@ const invite = {
 
         // girl
         {
-            name: '嘿，姐妹',
-            content: '我们互相监督打卡吧'
+            name: 'Hello~',
+            content: '今天你刷牙了吗?'
         },
 
         // boy
         {
-            name: '在，',
+            name: '在?',
             content: '我们互相监督打卡吧'
         }
     ],
@@ -277,7 +277,7 @@ const setting = {
 
     tip3: '关于作者',
     setting3: [
-        'Zero'
+        '南北'
     ],
 
     footer: [
@@ -293,9 +293,9 @@ const setting = {
  * About
  */
 const about = {
-    zero: {
-        title: 'Zero',
-        content: '前端开发工程师，目前主力研究iOS原生开发。\n有很多稀奇古怪的想法。\n 如果您对本作品有什么意见或建议，请与我联系。\n\n WeChat: (点击复制)'
+    author: {
+        title: '南北',
+        content: '是个好人。\n如果你对这个程序(对我)有什么意见,欢迎联系我\n WeChat: (点击复制微信号)'
     }
 }
 
@@ -304,7 +304,7 @@ const about = {
  */
 const calendar = {
     editHabit: '编辑习惯',
-    
+
     detail: {
         nameTip: '奖励:',
         contentTip: '寄语:',

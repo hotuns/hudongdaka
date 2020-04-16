@@ -24,12 +24,20 @@ Component({
       iconPath: "/images/tabBar/index.png",
       selectedIconPath: "/images/tabBar/index_s.png",
       text: "今天"
-    }, {
-      pagePath: "/pages/square/square/square",
+    }, 
+    {
+      pagePath: '/pages/addV2/add',
       iconPath: "/images/tabBar/square.png",
       selectedIconPath: "/images/tabBar/square_s.png",
-      text: "广场"
-    }, {
+      text: "习惯"
+    },
+    // {
+    //   pagePath: "/pages/square/square/square",
+    //   iconPath: "/images/tabBar/square.png",
+    //   selectedIconPath: "/images/tabBar/square_s.png",
+    //   text: "广场"
+    // },
+     {
       pagePath: "/pages/award/award/award",
       iconPath: "/images/tabBar/award.png",
       selectedIconPath: "/images/tabBar/award_s.png",
@@ -82,6 +90,7 @@ Component({
       }
 
       let show = component.data.show;
+      console.log(component)
       if (show) {
         component.hide();
       } else {

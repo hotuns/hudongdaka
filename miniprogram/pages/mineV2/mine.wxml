@@ -11,6 +11,9 @@
 <view class="body theme-{{ theme }}">
     <view class="header-bg">
       <view class="user-info interval">
+      <!-- <block wx:if={{}}>
+      
+      </block> -->
         <text class="user-name">{{ userInfo.nickname }}</text>
         <text class="day">{{ text.day }} {{ sinceToday }} 天</text>
         <!-- 任务统计 -->

@@ -39,6 +39,9 @@ Page({
       page: 0,
     });
 
+    if(app.globalData.refusedLogin) {
+      return
+    }
     this.loadData();
   },
 
@@ -51,7 +54,12 @@ Page({
 
     this.setData({
       iPhoneX: app.globalData.iPhoneX
-    });
+    }); 
+
+    if(app.globalData.refusedLogin) {
+
+      return 
+    }
 
     // 用户信息
     this.setData({
@@ -128,5 +136,9 @@ Page({
     } else {
       this.nav.show();
     }
+  },
+
+  cheakLogin() {
+    app.cheakLogin()
   }
 })

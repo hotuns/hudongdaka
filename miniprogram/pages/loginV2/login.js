@@ -91,5 +91,21 @@ Page({
                 showCancel: false
             });
         });
+<<<<<<< HEAD
     },
+=======
+      }
+    }).catch((code, msg) => {
+      console.log(code, msg);
+
+      wx.showModal({
+        title: '错误',
+        content: "网络异常[2]",
+        showCancel: false
+      });
+    });
+  }
+}
+
+>>>>>>> 073d0ec36169ae5b03578414432c0f8a6ab013d3
 })

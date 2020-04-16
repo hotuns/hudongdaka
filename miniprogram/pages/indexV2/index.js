@@ -72,13 +72,16 @@ Page({
     });
 
     // 登录态
-    if (app.globalData.userInfo == null || app.globalData.userInfo == "") {
-      wx.redirectTo({
-        url: '/pages/loginV2/login',
-      });
+    if (!app.globalData.refusedLogin) {
+      if (app.globalData.userInfo == null || app.globalData.userInfo == "") {
+        
+        wx.redirectTo({
+          url: '/pages/loginV2/login',
+        });
 
-      return ;
-    }
+        return ;
+      }
+    
 
     // 用户信息
     this.setData({
@@ -94,6 +97,12 @@ Page({
     if (app.globalData.needReloadPartner) {
       this.loadPartner();
     }
+
+  } 
+  else {
+    // 用户拒绝登录,体验部分内容
+    
+  }
   },
 
   /**

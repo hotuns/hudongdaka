@@ -9,12 +9,12 @@
             </view>
         </navigator>
 
-        <navigator url="/pages/square/add/add">
+        <!-- <navigator url="/pages/square/add/add">
             <view class="item {{ show ? 'item2-up' : 'item2-down' }}">
                 <image src="/images/add/square.png"></image>
                 <text>随笔</text>
             </view>
-        </navigator>
+        </navigator> -->
 
         <navigator url="/pages/award/add/add">
             <view class="item {{ show ? 'item3-up' : 'item3-down' }}">

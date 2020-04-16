@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/mineV2/mine",
     "pages/indexV2/index",
     "pages/setting/setting",
     "pages/award/award/award",
     "pages/invite/invite",
     "pages/square/square/square",
-    "pages/mineV2/mine",
     "pages/award/add/add",
     "pages/square/detail/detail",
     "pages/square/add/add",
@@ -37,6 +37,12 @@
         "iconPath": "/images/tabBar/square.png",
         "selectedIconPath": "/images/tabBar/square_s.png",
         "text": "广场"
+      },
+      {
+        "pagePath": "pages/addV2/add",
+        "iconPath": "/images/tabBar/square.png",
+        "selectedIconPath": "/images/tabBar/square_s.png",
+        "text": "习惯"
       },
       {
         "pagePath": "pages/award/award/award",

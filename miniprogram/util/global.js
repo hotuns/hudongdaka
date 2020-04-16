@@ -14,14 +14,13 @@ const system = {
  * 登录界面
  */
 const login = {
-    title: 'We Daily',   // logo文字提示
+    title: '一起坚持',   // logo文字提示
     login: 'Start',         // 登录按钮
     loading: 'Loading',     // 登录中
 
     // tip1: '每天都在坚持\n养成好的习惯',
     // tip2: '当然,',
     tip3: '你是我的习惯',
-    
 }
 
 /**
@@ -61,7 +60,7 @@ const hello = {
 
     // 结束
     tip5: {
-        string1: 'We Daily',
+        string1: '一起坚持',
         string2: 'Let\'s go!'
     }
 }

@@ -4,6 +4,7 @@ App({
 
     util: require('./util/util'),
 
+
     // 文案
     text: require('./util/global'),
 
@@ -75,6 +76,77 @@ App({
         });
     },
 
+    /**
+     * 检查是否登录
+     */
+    cheakLogin() {
+        if(!this.globalData.refusedLogin) {
+            return 
+        }
+
+        console.log(this.globalData.refusedLogin)
+
+        const User= require('./manager/User.js')
+
+        wx.authorize({
+            scope: 'scope.userInfo',
+            success() {
+                // 获取用户信息
+                wx.getUserInfo({
+                  complete: (info) => {
+                    wx.cloud.callFunction({
+                        name: "login",
+                      }).then(res => {
+                        if (res.errMsg == "cloud.callFunction:ok") {
+                          let _openid = res.result.openid;
+                          let userInfo = info.userInfo;
+                          userInfo._openid = _openid;
+                  
+                          User.login(userInfo).then(res => {
+                            
+                            app.globalData.userInfo = res.userInfo;
+                            wx.setStorageSync('userInfo', res.userInfo);
+                  
+                            app.globalData.partnerInfo = res.partnerInfo;
+                            wx.setStorageSync('partnerInfo', res.partnerInfo);        
+                  
+                            this.hello.show(userInfo.nickname);
+                  
+                          }).catch((err) => {
+                            wx.showModal({
+                              title: '错误',
+                              content: "网络异常[0]",
+                              showCancel: false
+                            });
+                  
+                            console.log(err);
+                            
+                          });
+                        } else {
+                          wx.showModal({
+                            title: '错误',
+                            content: "网络异常[1]",
+                            showCancel: false
+                          });
+                        }
+                      }).catch((code, msg) => {
+                        console.log(code, msg);
+                        
+                        wx.showModal({
+                          title: '错误',
+                          content: "网络异常[2]",
+                          showCancel: false
+                        });
+                      });
+                  },
+             })
+            },
+            fail(err){
+                console.log(err)
+            }
+        })
+    },
+
     globalData: {
         iPhoneX: false,
         navHeight: 0,
@@ -87,6 +159,7 @@ App({
         habitAmount: -1,          // 已经添加习惯数量
         theme: "default",         // 主题
         formIds: [],              // 表单ID,
-        habits: []                // habits _id <=> habit
+        habits: [],                // habits _id <=> habit
+        refusedLogin: true        // 用户拒绝登录
     }
 })

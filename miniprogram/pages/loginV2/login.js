@@ -12,7 +12,7 @@ Page({
     text: app.text.login,
 
     data: [{
-      title: '芒果Daily',
+      title: '我们的一天',
       data: '与好朋友共享每日清单\n快去提醒Ta打卡吧'
     }],
 
@@ -36,7 +36,7 @@ Page({
     if (e.detail.errMsg == "getUserInfo:fail auth deny") {
       wx.showModal({
         title: '请授权',
-        content: '否则您无法继续使用',
+        content: '否则您无法使用全部功能哦',
         showCancel: false
       });
 
@@ -44,9 +44,12 @@ Page({
         loading: false
       });
 
-      return ;
+      // return ;
+      app.globalData.refusedLogin = true
+      this.hello.show('不知名用户');
     }
 
+    else {
     wx.cloud.callFunction({
       name: "login",
     }).then(res => {
@@ -91,5 +94,7 @@ Page({
         showCancel: false
       });
     });
-  },
+  }
+}
+
 })
